@@ -1,5 +1,6 @@
 syntax on
 set background=dark
+" colorscheme solarized
 
 " tab
 set tabstop=2
@@ -19,6 +20,8 @@ highlight ColorColumn ctermbg=7
 highlight LineNr ctermfg=0
 highlight CursorLineNr ctermfg=8
 highlight Pmenu ctermbg=7
+highlight PmenuSel ctermfg=0
+highlight PmenuSel ctermbg=6
 
 " search
 set incsearch
@@ -28,8 +31,9 @@ set incsearch
 " set foldenable
 
 " encoding
+set ambiwidth=double
 set encoding=utf-8
-
+set termencoding=utf-8
 
 " For Python
 autocmd FileType py
@@ -53,8 +57,8 @@ autocmd FileType c,cpp,h,hpp,cu
     \ let g:clang_format#command='clang-format-3.8'|
     \ let g:clang_format#code_style='google' |
     \ let g:clang_format#style_options = {
-    \     "Standard" : "C++11",
-    \     "IndentWidth": 2}
+    \         "Standard" : "C++11",
+    \         "IndentWidth": 2}  
 
 " For YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '/home/maxujie/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'

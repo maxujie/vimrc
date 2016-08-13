@@ -1,6 +1,5 @@
 syntax on
 set background=dark
-" colorscheme noctu 
 
 " tab
 set tabstop=2
@@ -13,7 +12,6 @@ set number
 " visual function
 set cursorline
 set wildmenu
-" set lazyredraw
 set showmatch
 set textwidth=80
 set colorcolumn=80
@@ -34,32 +32,36 @@ set encoding=utf-8
 
 
 " For Python
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=80
-    \ set expandtab
+autocmd FileType py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=80 |
+    \ set expandtab |
     \ set autoindent
-    \ set fileformat=unix
 
 " For C/C++
-au BufNewFile,BufRead *.c, *.cpp, *.h, *.hpp, *.cu
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+autocmd FileType c, cpp, h, hpp, cu
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set expandtab |
+    \ set autoindent 
 
+" For ClangFormat
+autocmd FileType c,cpp,h,hpp,cu
+    \ let g:clang_format#command='clang-format-3.8'|
+    \ let g:clang_format#code_style='google' |
+    \ let g:clang_format#style_options = {
+    \     "Standard" : "C++11",
+    \     "IndentWidth": 2}
 
 " For YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '/home/maxujie/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
-" let g:ycm_path_to_python_interpreter='/usr/local/bin/python'
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_autoclose_preview_window_after_completion=1
-" let g:ycm_path_to_python_interpreter
+let g:ycm_cache_omnifunc=1
 
 " For airline
 set laststatus=2   " Always show the statusline
@@ -107,9 +109,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
-" Plugin 'noahfrederick/vim-noctu'
-" Plugin 'jnurmine/Zenburn'
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'rhysd/vim-clang-format'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

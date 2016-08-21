@@ -71,12 +71,6 @@ let g:ycm_cache_omnifunc=1
 set laststatus=2   " Always show the statusline
 let g:airline#extensions#tabline#enabled = 1
 
-" For powerline
-" let g:Powerline_symbols = 'fancy'
-" set nocompatible   " Disable vi-compatibility
-" set laststatus=2   " Always show the statusline
-" set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
-
 " For NERDTree
 let NERDTreeChDirMode=1
 let NERDTreeIgnore=['\~$']

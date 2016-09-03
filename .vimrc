@@ -6,6 +6,7 @@ set background=dark
 set tabstop=2
 set softtabstop=2
 set expandtab
+set shiftwidth=2
 
 " line number
 set number
@@ -108,6 +109,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'othree/html5.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -109,7 +109,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'rhysd/vim-clang-format'
-Plugin 'othree/html5.vim'
+" Plugin 'othree/html5.vim'
+" Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
